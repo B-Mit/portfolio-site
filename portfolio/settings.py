@@ -147,7 +147,7 @@ SERVER_EMAIL = "b.choabi98@gmail.com"
 EMAIL_BACKEND = "anymail.backends.seninblue.EmailBackend"
 
 ANYMAIL = {
-    "SENDINBLUE_API_KEY":"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", #Brevo API key
+    "SENDINBLUE_API_KEY":config("API_KEY"), #Brevo API key
 }
 
 DEFAULT_FROM_EMAIL= "b.choabi98@gmail.com"
