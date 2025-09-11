@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "Base",
+    "anymail"
 ]
 
 MIDDLEWARE = [
@@ -131,7 +132,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 #Gmail SMTP settings
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+#EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
@@ -141,3 +142,12 @@ EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL = "b.choabi98@gmail.com"
 SERVER_EMAIL = "b.choabi98@gmail.com"
 
+#Email Transactional provider
+
+EMAIL_BACKEND = "anymail.backends.seninblue.EmailBackend"
+
+ANYMAIL = {
+    "SENDINBLUE_API_KEY":"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", #Brevo API key
+}
+
+DEFAULT_FROM_EMAIL= "b.choabi98@gmail.com"
