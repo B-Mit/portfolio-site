@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Boitshoko Choabi</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!--navbar-->
+    <nav id="navbar" class="flex s-between bg-color">
+        <div class="left-nav">
+            <h2 class="t-white">Portfolio</h2>
+        </div>
+        <div class="right-nav">
+            <ul class="flex">
+                <li><a href="#home" class="t-white roboto">Home <i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#about" class="t-white roboto">About me <i class="fa-solid fa-user"></i></a></li>
+                <li><a href="#skills" class="t-white roboto">Skills <i class="fa-solid fa-code"></i></a></li>
+                <li><a href="#projects" class="t-white roboto">Projects <i class="fa-solid fa-diagram-project"></i></a></li>
+                <li><a href="#contact" class="t-white roboto">Contact <i class="fa-solid fa-rocket"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--home section-->
+    <section id="home" class="flex s-around w-80 m-auto">
+        <div class="home-left flex items-center">
+            <div class="home-content">
+                <h6 class="poppins">Hi, I'm </h6>
+                <h1 class="t-white">Boitshoko Choabi</h1>
+                <h4 class="poppins">Data Analyst</h4>
+                <a href="{% static 'pdf/Choabi Boitshoko_CV.pdf' %}" target="_blank">
+                    <button class="btn poppins">Download Resume</button>
+                </a>
+                <a class="btn live poppins" id="hireme" href="#contact">Let's talk</a>
+            </div>
+        </div>
+        <div class="home-right flex s-center items-center">
+            <div class="circle flex s-center items-center" id="mainImage">
+                <img src="{% static 'images/mypic.jpg' %}" alt="picture">
+            </div>
+        </div>
+    </section>
+
+    <!--about section-->
+    <section id="about">
+        <h1 class="t-center my-2 t-white f-2">About Me</h1>
+        <div class="about-container flex s-around">
+            <div class="about-right flex">
+                <div class="about-content">
+                    <!--<h1 class="t-white m-b-1 poppins">Boitshoko Choabi</h1> -->
+                    <p class="t-white poppins">I am a flexible and adaptable individual with good communication skills. 
+                        Initiativetaking; goal oriented and works well under pressure. 
+                        A collaborator and work well alone when the need arises. 
+                        With a strong foundation in Computer Science and Statistics, 
+                        I am eager to pursue my ambition of becoming a Data Scientist, 
+                        where I can design, develop, and deploy intelligent systems that transform industries and improve lives. </p>
+                    <h3 class="t-white m-b-1 poppins">Qualifications</h3>
+                    <ul> 
+                        <li class="t-white m-b-1 poppins">National Diploma in Civil Engineering, Nelson Mandela University</li>
+                        <li class="t-white m-b-1 poppins">BSc Computer Science and Statistics, Nelson Mandela University</li>
+                    </ul>
+                    <h3 class="t-white m-b-1 poppins">Certificates</h3>
+                    <ul>
+                        <li class="t-white m-b-1 poppins">Data Analyst Bootcamp on Udemy</li>
+                        <li class="t-white m-b-1 poppins">Deloitte Australia Data Analytics Job Simulation on Forage - July 2025</li>
+                        <li class="t-white m-b-1 poppins">Power BI for Beginners on SimpliLearn</li>
+                    </ul>
+                    <a href="#contact" class="btn poppins" id="hireme">Hire me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--skills section-->
+    <section id="skills" class="skills-section">
+        <h1 class="t-center my-2 t-white f-2">Skills</h1>
+        <div class="skills-container flex s-center">
+
+            <div class="skill-item">
+                <img src="{% static 'images/java.png' %}" alt="Java Logo">
+                <p class="t-white poppins">Java</p>
+            </div>
+
+            <div class="skill-item">
+                <img src="{% static 'images/power-bi-logo.png' %}" alt="PowerBI Logo">
+                <p class="t-white poppins">Power BI</p>
+            </div>
+
+            <div class="skill-item">
+                <img src="{% static 'images/python-logo.png' %}" alt="Python Logo">
+                <p class="t-white poppins">Python</p>
+            </div>
+
+            <div class="skill-item">
+                <img src="{% static 'images/r-logo.jpeg' %}" alt="R Logo">
+                <p class="t-white poppins">R Programming</p>
+            </div>
+
+            <div class="skill-item">
+                <img src="{% static 'images/visio-logo.jpg' %}" alt="Visio Logo">
+                <p class="t-white poppins">Microsoft Visio</p>
+            </div>
+         
+        </div>
+    </section>
+
+    <!--projects section-->
+    <section id="projects">
+        <h1 class="t-center my-2 t-white f-2">Projects</h1>
+        <div class="projects-container flex s-center">
+            <div class="projects-item flex f-col s-center items-center">
+                <h1 class="t-white poppins">Project 1 Name</h1>
+                <p class="t-white poppins">Project 1 brief description</p>
+                <div class="button flex s-around">
+                    <a href="" target="_blank" class="btn mx-1 m-top">GitHub</a>
+                </div>
+            </div>
+            <div class="projects-item flex f-col s-center items-center">
+                <h1 class="t-white poppins">My Portfolio</h1>
+                <p class="t-white poppins">A showcase of my personal work</p>
+                <div class="button flex s-around">
+                    <a href="" target="_blank" class="btn mx-1 m-top">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--contact me section-->
+    <section id="contact" class="m-b-1">
+        <h1 class="t-center my-2 t-white f-2">Contact Me</h1>
+        <div class="contact-container flex s-around items-center">
+            <div class="form" id="contactform">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="name form-div">
+                        <input type="text" name="name" id="name" class="poppins" placeholder="Enter your Name">
+                    </div>
+                    <div class="email form-div">
+                        <input type="email" name="email" id="email" class="poppins" placeholder="Enter your Email" required>
+                    </div>
+                    <div class="phone form-div">
+                        <input type="tel" name="number" id="phone" class="poppins" placeholder="Enter your Phone Number" required>
+                    </div>
+                    <div class="textarea form-div">
+                        <textarea name="content" id="textarea" cols="30" rows="10" class="poppins" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn poppins" id="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!--footer section-->
+    <footer id="footer">
+        <ul class="flex s-center w-80 m-auto my-2 res">
+            <li><a href="#home" class="poppins">Home</a></li>
+            <li><a href="#about" class="poppins">About Me</a></li>
+            <li><a href="#skills" class="poppins">Skills</a></li>
+            <li><a href="#projects" class="poppins">Projects</a></li>
+        </ul>
+        <ul class="flex s-center w-80 font-awesome">
+            <li>
+                <a href="https://www.linkedin.com/in/boitshoko-choabi-628ba3137/" target="_blank">
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://github.com/B-Mit" target="_blank">
+                <li><i class="fa-brands fa-github"></i></li>
+                </a>
+            </li>
+        </ul>
+        <p class="t-center my-2 poppins">All Rights Reserved - <span class="cpy-white poppins">Boitshoko Choabi</span></p>
+    </footer>
+</body>
+</html>
