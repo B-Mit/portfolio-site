@@ -144,7 +144,7 @@ SERVER_EMAIL = "b.choabi98@gmail.com"
 
 #Email Transactional provider
 
-EMAIL_BACKEND = "anymail.backends.seninblue.EmailBackend"
+EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
 
 ANYMAIL = {
     "SENDINBLUE_API_KEY":config("API_KEY"), #Brevo API key
