@@ -57,7 +57,7 @@ def contact(request):
             subject,
             body,
             settings.EMAIL_HOST_USER,   #from email
-            [settings.EMAIL_HOST_USER], #to email (my Gmail)
+            recipient_list=[settings.EMAIL_HOST_USER], #to email (my Gmail)
             fail_silently=False
             )
             messages.success(request,"Your message has been sent successfully!")
